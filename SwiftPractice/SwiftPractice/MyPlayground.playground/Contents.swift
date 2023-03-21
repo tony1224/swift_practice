@@ -31,3 +31,19 @@ for index in stride(from: 1, to: arr.count, by: 1) {
         isSwapped = true
     }
 }
+
+// 配列操作
+// ObjC時代には無かった
+let nums = [1,2,3,4,5,6,7,8,9,10]
+// map
+let mapNums = nums.map { $0 * 10 }
+print(mapNums)
+// filter
+let descendingOrder = nums.filter { $0 > 5 }
+print(descendingOrder)
+let surplus = nums.filter { $0 % 2 == 0 }
+print(surplus)
+// reduce
+// ひとまとめにする
+let reduceNums = nums.reduce(0) { $0 + $1 }
+print(reduceNums)
